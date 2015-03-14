@@ -1,0 +1,34 @@
+.dima-navbar-wrap {
+    .dima-navbar {
+        &.dima-navbar-center {
+            .logo {
+                float: none;
+                position: relative;
+                z-index: 1;
+                margin: 0 auto;
+                h1 {
+                    text-align: center;
+                }
+            }
+            .dima-nav {
+                position: absolute;
+                >li {
+                    display: inline-block;
+                    &:last-child > a{
+                    	padding-right: 15px !important;
+                    }
+                }
+            }
+            .text-end {
+                .dima-nav {
+                  @include end(0);
+                }
+            }
+            .text-start {
+                .dima-nav {
+                    @include start(0);
+                }
+            }
+        }
+    }
+}
