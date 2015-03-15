@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if lt IE 7]>      <html ng-app="blogsApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html ng-app="blogsApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html ng-app="blogsApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html ng-app="blogsApp" class="no-js">
 <!--<![endif]-->
 
 <head>
@@ -12,8 +12,8 @@
     <title>AHMED ELKILANI WEBLOG</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <link rel="stylesheet" data-them="" href="dist/css/styles-blog-one.css">
 
     <!--[if IE]>
@@ -26,7 +26,8 @@
 
     <!-- Googl Font -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700,300" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic" rel="stylesheet"
+          type="text/css">
 
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="assets/img/favicon.png" type="image/x-icon"/>
@@ -36,648 +37,359 @@
 
 <body class="responsive " id="demo-blog-one">
 
-    <!-- LOADING -->
-    <div class="all_content loading">
+<!-- LOADING -->
+<div class="all_content loading">
 
-        <!-- HEADER -->
-        <header role="banner">
-            <div class="dima-navbar-wrap">
-                <div class="dima-navbar   fix-one">
+    <!-- HEADER -->
+    <ng-include src="'views/partials/shared/_header.html'"></ng-include>
+    <!--! HEADER -->
 
-                    <div class="clearfix dima-nav-fixed"></div>
+    <!-- ALL CONTENTS -->
+    <div class="dima-main">
 
-                    <div class="container">
+        <!-- BIG TITLE HERE -->
+        <ng-include src="'views/partials/shared/_big-title.html'"></ng-include>
+        <!--! BIG TITLE HERE -->
 
-                        <!-- NAVBAR BUTTON -->
-                        <a class="dima-btn-nav" href="#"><i class="fa fa-bars"></i></a>
-                        <!--! NAVBAR BUTTON -->
+        <!-- SECTION -->
+        <section class="section ">
+            <div class="page-section-content boxed-blog blog-list">
+                <div class="container blog">
 
-                        <!-- LOGO -->
-                        <div class="logo">
-                            <h1>
-                    <a href="demo-blog-one.html" title="PixelDima.com logo">
-                    <span class="vertical-middle"></span>
-                        <img src="assets/img/blog_logo_1.png" alt="PixelDima Logo" title="PixelDima">
-                    </a>
-                </h1>
-                        </div>
+                    <div class="main cl_8 first">
 
-                        <!-- Menu -->
-                        <nav role="navigation" class="clearfix" >
-                            <ul class="dima-nav-end sf-menu">
-                                <li class="search-btn">
-                                    <a href="#"><i class="fa fa-search"></i></a>
-                                </li>
-                            </ul>
-                            <ul class="dima-nav sf-menu">
-                                <li class="sub-icon">
-                                    <a href="#">the weblog</a>
-                                </li>
-                                <li class="sub-icon">
-                                    <a href="#">about me</a>                                    
-                                </li>
-								<li class="sub-icon">
-                                    <a href="#">contact me</a>                                    
-                                </li>
-								<li class="sub-icon">
-                                    <a href="#">sign in</a>                                    
-                                </li>                                     
-                            </ul>
+                        <!-- DEFAULT POST -->
+                        <article role="article" class="post ">
+                            <div class="post-img ">
+                                <img src="assets/img/posts/my-post-1-2.jpg" alt="Brand Consulting">
 
-                        </nav>
-                    </div>
-                    <!-- container -->
-
-                    <div id="search-box">
-                        <div class="container">
-                            <form>
-                                <input type="text" placeholder="Start Typing...">
-                            </form>
-                            <div id="close">
-                                <a href="#">
-                                    <i class="di-close"></i>
-                                </a>
+                                <div class="link_overlay  ">
+                                    <ul class="icons-media">
+                                        <li><a href="#"><i class="fa fa-link"></i></a>
+                                        </li>
+                                    </ul>
+                                    <span class="topaz-hover"></span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dima"></div>
-            </div>
-
-        </header>
-        <!--! HEADER -->
-
-        <!-- ALL CONTENTS -->
-        <div class="dima-main">
-
-            <!-- BIG TITLE HERE -->
-            <section class="title_container">
-                <div class="page-section-content">
-                    <div class="background-image-hide parallax-background">
-                        <img class="background-image" alt="Background Image" src="assets/img/slides/header-blog-bg.jpg">
-                    </div>
-                    <div class="clear"></div>
-                    <div class="container page-section text-center">
-                        <h2 class="uppercase undertitle">Technical Weblog</h2>
-                    </div>
-                </div>
-            </section>
-            <!--! BIG TITLE HERE -->
-
-            <!-- SECTION -->
-            <section class="section ">
-                <div class="page-section-content boxed-blog blog-list">
-                    <div class="container blog">
-
-                        <div class="main cl_8 first">
-
-                            <!-- DEFAULT POST -->
-                            <article role="article" class="post ">
-                                <div class="post-img ">
-                                    <img src="assets/img/posts/my-post-1-2.jpg" alt="Brand Consulting">
-                                    <div class="link_overlay  ">
-                                        <ul class="icons-media">
-                                            <li><a href="#"><i class="fa fa-link"></i></a>
-                                            </li>
-                                        </ul>
-                                        <span class="topaz-hover"></span>
-                                    </div>
-                                </div>
-                                <div class="post-meta box">
-                                    <ul>
-                                        <li class="post-on">Posted by Admin on 09 Sept 2014</li>
-                                        <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
-                                        <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
-                                    </ul>
-                                </div>
-                                <div class="post-content text-start box">
-                                    <h4><a href="#">Psychology in Branding</a>
-                                    </h4>
-                                    <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris...</p>
-                                </div>
-                            </article>
-                            <!--! DEFAULT POST -->
-
-                            <!-- ZOOM POST -->
-                            <article role="article" class="post ">
-                                <div class="post-img ">
-                                    <img src="assets/img/posts/my-post-2-2.jpg" alt="Brand Consulting">
-                                    <div class="link_overlay with_opacity">
-                                        <ul class="icons-media">
-                                            <li><a href="assets/img/posts/my-post-2-2@2x.jpg" data-lightbox="image"><i class="fa fa-search-plus"></i></a>
-                                            </li>
-                                        </ul>
-                                        <span class="topaz-hover"></span>
-                                    </div>
-                                </div>
-
-                                <div class="post-meta box">
-                                    <ul>
-                                        <li class="post-on">Posted by Admin on 09 Sept 2014</li>
-                                        <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
-                                        <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
-                                    </ul>
-                                </div>
-
-                                <div class="post-content text-start box">
-                                    <h4><a href="#">responsive web design</a>
-                                    </h4>
-                                    <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris...</p>
-                                </div>
-                            </article>
-                            <!--! ZOOM POST -->
-
-                            <!-- QUOTE POST -->
-                            <article role="article" class="post ">
-                                <blockquote class="blog-style">
-                                    <div class="topaz-border"></div>
-                                    <p>“A designer is an emerging synthesis of artist, inventor, mechanic,”</p>
-                                    <cite><a href="">Buckminster Fuller</a>
-                                    </cite>
-                                </blockquote>
-                                <div class="post-meta box">
-                                    <ul>
-                                        <li class="post-on">Posted by Admin on 09 Sept 2014</li>
-                                        <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
-                                        <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
-                                    </ul>
-                                </div>
-                                <div class="post-content text-start box">
-                                    <h4><a href="#">process of prototyping</a>
-                                    </h4>
-                                    <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris...</p>
-                                </div>
-                            </article>
-                            <!--! QUOTE POST -->
-
-                            <!-- POST WITHOUT IMAGE -->
-                            <article role="article" class="post ">
-                                <div class="post-meta box">
-                                    <ul>
-                                        <li class="post-on">Posted by Admin on 09 Sept 2014</li>
-                                        <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
-                                        <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
-                                    </ul>
-                                </div>
-                                <div class="post-content text-start box">
-                                    <h4><a href="#">responsive web design</a>
-                                    </h4>
-                                    <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris...</p>
-                                </div>
-                            </article>
-                            <!--! POST WITHOUT IMAGE -->
-
-                            <!-- SLIDER POST -->
-                            <article role="article" class="post ">
-                                <div class="post-img ">
-                                    <div class="flexslider sample-slide small-control" data-animation="fade" data-loop="true">
-                                        <ul class="slides">
-                                            <li class="slide-item">
-                                                <div class="flex-img">
-                                                    <img src="assets/img/posts/post-list-1.jpg" alt="">
-                                                </div>
-                                            </li>
-
-                                            <li class="slide-item">
-                                                <div class="flex-img">
-                                                    <img src="assets/img/posts/post-list-2.jpg" alt="">
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="flex-img">
-                                                    <img src="assets/img/posts/post-list-3.jpg" alt="">
-                                                </div>
-                                            </li>
-                                            <li class="slide-item">
-                                                <div class="flex-img">
-                                                    <img src="assets/img/posts/post-list-1.jpg" alt="">
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="post-meta box">
-                                    <ul>
-                                        <li class="post-on">Posted by Admin on 09 Sept 2014</li>
-                                        <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
-                                        <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
-                                    </ul>
-                                </div>
-
-                                <div class="post-content text-start box">
-                                    <h4><a href="#">photos from the world</a>
-                                    </h4>
-                                    <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris...</p>
-                                </div>
-                            </article>
-                            <!--! SLIDER POST -->
-
-                            <!-- SOUNDCLOUD POST -->
-                            <article role="article" class="post ">
-                                <div class="post-img pad">
-                                    <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/33209651&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-                                </div>
-                                <div class="post-meta box">
-                                    <ul>
-                                        <li class="post-on">Posted by Admin on 09 Sept 2014</li>
-                                        <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
-                                        <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
-                                    </ul>
-                                </div>
-                                <div class="post-content text-start box">
-                                    <h4><a href="#">canary - this is my song</a>
-                                    </h4>
-                                    <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris...</p>
-                                </div>
-                            </article>
-                            <!--! SOUNDCLOUD POST -->
-
-                            <!-- TWITTER POST -->
-                            <article role="article" class="post ">
-                                <div class="post-img pad">
-                                    <blockquote class="twitter-tweet" data-cards="hidden" lang="en">
-                                        <p>Check out this great <a href="https://twitter.com/hashtag/themeforest?src=hash">#themeforest</a> item &#39;Topaz - PSD Template&#39; <a href="http://t.co/j8dWajauBp">http://t.co/j8dWajauBp</a>
-                                        </p>&mdash; PixelDima (@PixelDima) <a href="https://twitter.com/PixelDima/status/488922142143021056">July 15, 2014</a>
-                                    </blockquote>
-                                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                </div>
-                                <div class="post-meta box">
-                                    <ul>
-                                        <li class="post-on">Posted by Admin on 09 Sept 2014</li>
-                                        <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
-                                        <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
-                                    </ul>
-                                </div>
-                                <div class="post-content text-start box">
-                                    <h4><a href="#">See what others say about #PixelDima</a>
-                                    </h4>
-                                    <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris...</p>
-                                </div>
-                            </article>
-                            <!--! TWITTER POST -->
-
-                            <!-- PAGINATION -->
-                            <div class="dima-pagination text-end">
+                            <div class="post-meta box">
                                 <ul>
-                                    <li>
-                                        <a href="#" class="current-page">
-                                            <span>1</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span>2</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span>3</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span>4</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span>...</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span>21</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span><i class="fa fa-angle-right"></i>
-                                            </span>
-                                        </a>
-                                    </li>
+                                    <li class="post-on">Posted by Admin on 09 Sept 2014</li>
+                                    <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
+                                    <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
                                 </ul>
                             </div>
-                            <!--! PAGINATION -->
+                            <div class="post-content text-start box">
+                                <h4><a href="#">Psychology in Branding</a>
+                                </h4>
 
-                        </div>
+                                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
+                                    quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                                    sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
+                                    velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet
+                                    nibh vulputate cursus a sit amet mauris...</p>
+                            </div>
+                        </article>
+                        <!--! DEFAULT POST -->
 
-                        <!-- SIDEBAR -->
-                        <aside role="complementary" class="sidebar hidden-tm cl_4 hidden">
-                            <!-- AUTHOR WIDGET -->
-                            <div class="widget dima-author-box clearfix text-center">
-                                <div class="dima-about-image apply-gray">
-                                    <a href="#">
-                                        <img src="assets/img/posts/author.jpg" alt="">
-                                    </a>
+                        <!-- ZOOM POST -->
+                        <article role="article" class="post ">
+                            <div class="post-img ">
+                                <img src="assets/img/posts/my-post-2-2.jpg" alt="Brand Consulting">
+
+                                <div class="link_overlay with_opacity">
+                                    <ul class="icons-media">
+                                        <li><a href="assets/img/posts/my-post-2-2@2x.jpg" data-lightbox="image"><i
+                                                class="fa fa-search-plus"></i></a>
+                                        </li>
+                                    </ul>
+                                    <span class="topaz-hover"></span>
                                 </div>
-                                <div class="dima-author-info">
-                                    <h5 class="dima-author-name"><a href="">AHMED ELKILANI</a>
-            </h5>
-                                    <p>Lorem Ipsum. Duis sed odio sit . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.</p>
+                            </div>
 
-                                </div>
+                            <div class="post-meta box">
+                                <ul>
+                                    <li class="post-on">Posted by Admin on 09 Sept 2014</li>
+                                    <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
+                                    <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
+                                </ul>
+                            </div>
+
+                            <div class="post-content text-start box">
+                                <h4><a href="#">responsive web design</a>
+                                </h4>
+
+                                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
+                                    quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                                    sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
+                                    velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet
+                                    nibh vulputate cursus a sit amet mauris...</p>
+                            </div>
+                        </article>
+                        <!--! ZOOM POST -->
+
+                        <!-- QUOTE POST -->
+                        <article role="article" class="post ">
+                            <blockquote class="blog-style">
                                 <div class="topaz-border"></div>
+                                <p>“A designer is an emerging synthesis of artist, inventor, mechanic,”</p>
+                                <cite><a href="">Buckminster Fuller</a>
+                                </cite>
+                            </blockquote>
+                            <div class="post-meta box">
+                                <ul>
+                                    <li class="post-on">Posted by Admin on 09 Sept 2014</li>
+                                    <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
+                                    <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
+                                </ul>
                             </div>
-                            <!--! AUTHOR WIDGET -->
+                            <div class="post-content text-start box">
+                                <h4><a href="#">process of prototyping</a>
+                                </h4>
 
-                            <!-- SOCIAL ICONS WIDGET -->
-                            <div class="widget">
-                                <div class="widget-content">
-                                    <ul class="social-media social-big inline clearfix">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
+                                    quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                                    sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
+                                    velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet
+                                    nibh vulputate cursus a sit amet mauris...</p>
+                            </div>
+                        </article>
+                        <!--! QUOTE POST -->
+
+                        <!-- POST WITHOUT IMAGE -->
+                        <article role="article" class="post ">
+                            <div class="post-meta box">
+                                <ul>
+                                    <li class="post-on">Posted by Admin on 09 Sept 2014</li>
+                                    <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
+                                    <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
+                                </ul>
+                            </div>
+                            <div class="post-content text-start box">
+                                <h4><a href="#">responsive web design</a>
+                                </h4>
+
+                                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
+                                    quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                                    sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
+                                    velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet
+                                    nibh vulputate cursus a sit amet mauris...</p>
+                            </div>
+                        </article>
+                        <!--! POST WITHOUT IMAGE -->
+
+                        <!-- SLIDER POST -->
+                        <article role="article" class="post ">
+                            <div class="post-img ">
+                                <div class="flexslider sample-slide small-control" data-animation="fade"
+                                     data-loop="true">
+                                    <ul class="slides">
+                                        <li class="slide-item">
+                                            <div class="flex-img">
+                                                <img src="assets/img/posts/post-list-1.jpg" alt="">
+                                            </div>
                                         </li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+
+                                        <li class="slide-item">
+                                            <div class="flex-img">
+                                                <img src="assets/img/posts/post-list-2.jpg" alt="">
+                                            </div>
                                         </li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <li>
+                                            <div class="flex-img">
+                                                <img src="assets/img/posts/post-list-3.jpg" alt="">
+                                            </div>
                                         </li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a>
+                                        <li class="slide-item">
+                                            <div class="flex-img">
+                                                <img src="assets/img/posts/post-list-1.jpg" alt="">
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <!--! SOCIAL ICONS WIDGET -->
 
-                            <!-- LATEST POSTS WIDGET -->
-                            <div class="widget">
-                                <h5 class="widget-title uppercase">Latest posts</h5>
-                                <div class="widget-content">
-                                    <ul class="with-border featured-posts">
-
-                                        <!-- POST (1) -->
-                                        <li>
-                                            <a href="#">
-                                                <h6 class="uppercase">The psychology of branding</h6>
-                                            </a>
-                                            <span>By Admin / 09 Sept 2014</span>
-                                        </li>
-                                        <!--! POST (1) -->
-
-                                        <!-- POST (2) -->
-                                        <li>
-                                            <a href="#">
-                                                <h6 class="uppercase">The psychology of branding</h6>
-                                            </a>
-                                            <span>By Admin / 09 Sept 2014</span>
-                                        </li>
-                                        <!-- POST (2) -->
-
-                                        <!-- POST (3) -->
-                                        <li>
-                                            <a href="#">
-                                                <h6 class="uppercase">The psychology of branding</h6>
-                                            </a>
-                                            <span>By Admin / 09 Sept 2014</span>
-                                        </li>
-                                        <!-- POST (3) -->
-
-                                    </ul>
-                                </div>
+                            <div class="post-meta box">
+                                <ul>
+                                    <li class="post-on">Posted by Admin on 09 Sept 2014</li>
+                                    <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
+                                    <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
+                                </ul>
                             </div>
-                            <!--! LATEST POSTS WIDGET -->
 
+                            <div class="post-content text-start box">
+                                <h4><a href="#">photos from the world</a>
+                                </h4>
 
-                            <!-- TWITTER WIDGET -->
-                            <div class="widget">
-                                <h5 class="widget-title uppercase">Twitter</h5>
-                                <div class="widget-content">
-                                    <div id="tweet" class="tweet" data-id="550345973122490368" data-count="2" data-type="list">
-                                        <p>Please wait...</p>
-                                    </div>
-                                </div>
+                                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
+                                    quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                                    sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
+                                    velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet
+                                    nibh vulputate cursus a sit amet mauris...</p>
                             </div>
-                            <!--! TWITTER WIDGET -->
+                        </article>
+                        <!--! SLIDER POST -->
 
-                            <!-- ADVERTISEMENTS WIDGET -->
-                            <div class="widget">
-                                <div class="widget-content">
-                                    <ul class="dima-ads clearfix">
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/untitled-1.jpg" alt="">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/untitled-1.jpg" alt="">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/untitled-1.jpg" alt="">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/untitled-1.jpg" alt="">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <!-- SOUNDCLOUD POST -->
+                        <article role="article" class="post ">
+                            <div class="post-img pad">
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no"
+                                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/33209651&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
                             </div>
-                            <!--! ADVERTISEMENTS WIDGET -->
-
-
-                            <!-- CATEGORIES  WIDGET -->
-                            <div class="widget">
-                                <h5 class="widget-title uppercase">CATEGORIES</h5>
-                                <div class="widget-content">
-                                    <ul class="with-border categories-posts">
-                                        <li><a href="#">Template</a>
-                                            <span>15</span>
-                                        </li>
-                                        <li><a href="#">Wordpress</a>
-                                            <span>02</span>
-                                        </li>
-                                        <li><a href="#">Brand</a>
-                                            <span>06</span>
-                                        </li>
-                                        <li><a href="#">Creative</a>
-                                            <span>11</span>
-                                        </li>
-                                        <li><a href="#">Corporate</a>
-                                            <span>08</span>
-                                        </li>
-                                        <li><a href="#">Graphics</a>
-                                            <span>23</span>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="post-meta box">
+                                <ul>
+                                    <li class="post-on">Posted by Admin on 09 Sept 2014</li>
+                                    <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
+                                    <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
+                                </ul>
                             </div>
-                            <!--! CATEGORIES  WIDGET -->
+                            <div class="post-content text-start box">
+                                <h4><a href="#">canary - this is my song</a>
+                                </h4>
 
-                            <!-- TAGS  WIDGET -->
-                            <div class="widget">
-                                <h5 class="widget-title uppercase">POPULAR TAGS</h5>
-                                <div class="widget-content">
-                                    <div class="tags">
-                                        <a href="#">logo</a>
-                                        <a href="#">design</a>
-                                        <a href="#">website</a>
-                                        <a href="#">wordpress</a>
-                                        <a href="#">elegant</a>
-                                        <a href="#">brand</a>
-                                        <a href="#">simple</a>
-                                    </div>
-                                </div>
+                                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
+                                    quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                                    sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
+                                    velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet
+                                    nibh vulputate cursus a sit amet mauris...</p>
                             </div>
-                            <!--! TAGS  WIDGET -->
+                        </article>
+                        <!--! SOUNDCLOUD POST -->
 
-                            <!-- ATCHIVES  WIDGET -->
-                            <div class="widget">
-                                <h5 class="widget-title uppercase">archives</h5>
-                                <div class="widget-content">
-                                    <ul class="with-border archif-posts">
-                                        <li><a href="#">Jul 2014</a>
-                                            <span>10</span>
-                                        </li>
-                                        <li><a href="#">Jun 2014</a>
-                                            <span>08</span>
-                                        </li>
-                                        <li><a href="#">May 2014</a>
-                                            <span>12</span>
-                                        </li>
-                                        <li><a href="#">Apr 2014</a>
-                                            <span>02</span>
-                                        </li>
-                                        <li><a href="#">Mar 2014</a>
-                                            <span>11</span>
-                                        </li>
-                                        <li><a href="#">Feb 2014</a>
-                                            <span>23</span>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <!-- TWITTER POST -->
+                        <article role="article" class="post ">
+                            <div class="post-img pad">
+                                <blockquote class="twitter-tweet" data-cards="hidden" lang="en">
+                                    <p>Check out this great <a href="https://twitter.com/hashtag/themeforest?src=hash">#themeforest</a>
+                                        item &#39;Topaz - PSD Template&#39; <a href="http://t.co/j8dWajauBp">http://t.co/j8dWajauBp</a>
+                                    </p>&mdash; PixelDima (@PixelDima) <a
+                                        href="https://twitter.com/PixelDima/status/488922142143021056">July 15, 2014</a>
+                                </blockquote>
+                                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                             </div>
-                            <!--! ATCHIVES  WIDGET -->
+                            <div class="post-meta box">
+                                <ul>
+                                    <li class="post-on">Posted by Admin on 09 Sept 2014</li>
+                                    <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
+                                    <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
+                                </ul>
+                            </div>
+                            <div class="post-content text-start box">
+                                <h4><a href="#">See what others say about #PixelDima</a>
+                                </h4>
 
-                        </aside>
-                        <!--! SIDEBAR -->
+                                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
+                                    quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                                    sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
+                                    velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet
+                                    nibh vulputate cursus a sit amet mauris...</p>
+                            </div>
+                        </article>
+                        <!--! TWITTER POST -->
 
-                    </div>
-                </div>
-            </section>
-            <!--! SECTION -->
-
-        </div>
-        <!--! ALL CONTENTS -->
-
-        <!-- FOOTER -->
-        <div class="top-footer">
-            <div class="container">
-                <div class="flexbox di_1_of_4 first widget">
-                    <h5 class="widget-titel with-border uppercase">about us</h5>
-                    <div class="widget-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non,est, nemo quo odio dignissimos deserunt ipsa molestiae fugiat cumque sequi.</p>
-                    </div>
-                    <div class="double-clear"></div>
-                    <div class="widget-content">
-                        <div class="dima-social-footer social-media social-medium">
-                            <ul class="inline clearfix">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        <!-- PAGINATION -->
+                        <div class="dima-pagination text-end">
+                            <ul>
+                                <li>
+                                    <a href="#" class="current-page">
+                                        <span>1</span>
+                                    </a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                <li>
+                                    <a href="#">
+                                        <span>2</span>
+                                    </a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a>
+                                <li>
+                                    <a href="#">
+                                        <span>3</span>
+                                    </a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a>
+                                <li>
+                                    <a href="#">
+                                        <span>4</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>...</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>21</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                            <span><i class="fa fa-angle-right"></i>
+                                            </span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
+                        <!--! PAGINATION -->
+
                     </div>
-                </div>
-                <div class="flexbox di_1_of_4 widget">
-                    <h5 class="widget-titel uppercase">Featured posts</h5>
-                    <div class="widget-content">
-                        <ul class="with-border featured-posts">
-                            <li>
-                                <a href="#">
-                                    <h6 class="uppercase">The psychology of branding</h6>
-                                </a>
-                                <span>By Admin / 09 Sept 2014</span>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <h6 class="uppercase">The psychology of branding</h6>
-                                </a>
-                                <span>By Admin / 09 Sept 2014</span>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <h6 class="uppercase">The psychology of branding</h6>
-                                </a>
-                                <span>By Admin / 09 Sept 2014</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="flexbox di_1_of_4 widget ">
-                    <h5 class="widget-titel uppercase">Contact us</h5>
-                    <div class="widget-content">
-                        <ul class="with-border featured-posts contact-icon">
-                            <li>
-                                <i class="fa fa-map-marker "></i>
-                                <p>Bluett Avenue, Seaview, Isle of Wight PO34, UK</p>
-                            </li>
-                            <li>
-                                <i class="fa fa-phone"></i>
-                                <p>+213 2020 555013</p>
-                                <p>+213 7700 900106</p>
-                            </li>
-                            <li>
-                                <i class="fa fa-envelope"></i>
-                                <p>Emal1@domain.com</p>
-                                <p>Emal2@domain.com</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="flexbox di_1_of_4 widget ">
-                    <h5 class="widget-titel uppercase">flickr</h5>
-                    <div class="widget-content">
-                        <ul class="flkr-cont" data-limit="6" data-id="125167502@N02">
-                        </ul>
-                    </div>
+
+                    <!-- SIDEBAR -->
+                    <aside role="complementary" class="sidebar hidden-tm cl_4 hidden">
+                        <!-- AUTHOR WIDGET -->
+                        <ng-include src="'views/partials/shared/_author-widget.html'"></ng-include>
+                        <!--! AUTHOR WIDGET -->
+
+                        <!-- SOCIAL ICONS WIDGET -->
+                        <ng-include src="'views/partials/shared/_socialicons-widget.html'"></ng-include>
+                        <!--! SOCIAL ICONS WIDGET -->
+
+                        <!-- LATEST POSTS WIDGET -->
+                        <ng-include src="'views/partials/shared/_latest-posts-widget.html'"></ng-include>
+                        <!--! LATEST POSTS WIDGET -->
+
+                        <!-- TWITTER WIDGET -->
+                        <ng-include src="'views/partials/shared/_twitter-widget.html'"></ng-include>
+                        <!--! TWITTER WIDGET -->
+
+                        <!-- ADVERTISEMENTS WIDGET -->
+                        <ng-include src="'views/partials/shared/_ads-widget.html'"></ng-include>
+                        <!--! ADVERTISEMENTS WIDGET -->
+
+
+                        <!-- CATEGORIES  WIDGET -->
+                        <ng-include src="'views/partials/shared/_categories-widget.html'"></ng-include>
+                        <!--! CATEGORIES  WIDGET -->
+
+                        <!-- TAGS  WIDGET -->
+                        <ng-include src="'views/partials/shared/_tags-widget.html'"></ng-include>
+                        <!--! TAGS  WIDGET -->
+
+                        <!-- ATCHIVES  WIDGET -->
+                        <ng-include src="'views/partials/shared/_archives-widget.html'"></ng-include>
+                        <!--! ATCHIVES  WIDGET -->
+
+                    </aside>
+                    <!--! SIDEBAR -->
+
                 </div>
             </div>
-        </div>
-        <footer role="contentinfo" class="dima-footer">
-            <div class="container">
-                <div class="flexbox di_1_of_3 first">
-                    <div class="copyright">
-                <p>© 2015 ahmed-elkilani. Created by <a href="http://ahmedkilani.com" target="_blank">ahmed-elkilani</a>
-                </p>
-            </div>
-                </div>
-                <div class="flexbox di_2_of_3">
-                    <ul class="dima-menu">
-                        <li><a href="#">About us</a>
-                        </li>
-                        <li><a href="#">Team</a>
-                        </li>
-                        <li><a href="#">Services</a>
-                        </li>
-                        <li><a href="#">Works</a>
-                        </li>
-                        <li><a href="#">Clients</a>
-                        </li>
-                        <li><a href="#">News</a>
-                        </li>
-                        <li><a href="#">Contact us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
+        </section>
+        <!--! SECTION -->
 
-        <!--! FOOTER -->
+    </div>
+    <!--! ALL CONTENTS -->
 
-    </div>	
-	<script src="dist/js/vendor.min.js"></script>
-	<script src="dist/js/components.min.js"></script>
-    <script src="dist/js/main.min.js"></script>
+    <!-- FOOTER -->
+    <ng-include src="'views/partials/shared/_footer.html'"></ng-include>
+    <!--! FOOTER -->
 
-    <!--! LOADING -->
+</div>
+
+<script src="dist/js/vendor.min.js"></script>
+<script src="dist/js/components.min.js"></script>
+<script src="dist/js/app.min.js"></script>
+<script src="dist/js/main.min.js"></script>
+
+
+<!--! LOADING -->
 
 </body>
 
