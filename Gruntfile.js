@@ -107,9 +107,8 @@ module.exports = function(grunt) {
 			
 		  ],
 		  'app/dist/js/components.min.js': [
-				'app/scripts/components/version/version.js',
-				'app/scripts/components/version/version-directive.js',
-				'app/scripts/components/version/interpolate-filter.js',
+				'app/scripts/components/version/*.js',
+                'app/scripts/components/date/*.js',
 				'app/scripts/components/core/*.js'
 		  ],
 		  'app/dist/js/main.min.js': [
