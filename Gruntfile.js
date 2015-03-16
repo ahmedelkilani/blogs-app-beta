@@ -55,12 +55,10 @@ module.exports = function (grunt) {
         // configure uglify to minify js files -------------------------------------
         uglify: {
             options: {
+                sourceMap: true,
                 banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
             },
-            build: {
-                options: {
-                    sourceMap: true
-                },
+            vendor: {
                 files: {
                     'app/dist/js/vendor.min.js': [
                         'app/vendor/bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js',
@@ -103,7 +101,11 @@ module.exports = function (grunt) {
                         'app/vendor/js/video.js',
                         'app/vendor/js/bigvideo.js'
 
-                    ],
+                    ]
+                }
+            },
+            app: {
+                files: {
                     'app/dist/js/app.min.js': [
                         'app/scripts/*.js'
                     ],
@@ -121,8 +123,10 @@ module.exports = function (grunt) {
                 }
             }
         }
-
     });
+
+    // DEFAULT TASK
+    grunt.registerTask('default', ['uglify', 'compass']);
 
     // ===========================================================================
     // LOAD GRUNT PLUGINS ========================================================
