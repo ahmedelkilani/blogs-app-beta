@@ -56,15 +56,16 @@ module.exports = function (grunt) {
         uglify: {
             options: {
                 sourceMap: true,
-                banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
+                banner: '/*\n <%= pkg.description %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
             },
             vendor: {
                 files: {
                     'app/dist/js/vendor.min.js': [
                         'app/vendor/bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js',
+                        'app/vendor/bower_components/jquery/dist/jquery.js',
                         'app/vendor/bower_components/angular/angular.js',
                         'app/vendor/bower_components/angular-route/angular-route.js',
-                        'app/vendor/bower_components/jquery/dist/jquery.js',
+                        'app/vendor/bower_components/angular-resource/angular-resource.js',
                         'app/vendor/bower_components/jquery.easing/js/jquery.easing.js',
                         'app/vendor/bower_components/imagesloaded/imagesloaded.pkgd.js',
                         'app/vendor/bower_components/respond-minmax/src/respond.js',
@@ -104,7 +105,7 @@ module.exports = function (grunt) {
                     ]
                 }
             },
-            app: {
+            build: {
                 files: {
                     'app/dist/js/app.min.js': [
                         'app/scripts/*.js'
@@ -116,6 +117,9 @@ module.exports = function (grunt) {
                     ],
                     'app/dist/js/main.min.js': [
                         'app/scripts/components/*.js'
+                    ],
+                    'app/dist/js/services.min.js': [
+                        'app/scripts/services/**/*.js'
                     ],
                     'app/dist/js/controllers.min.js': [
                         'app/scripts/controllers/**/*.js'

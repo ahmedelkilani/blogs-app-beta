@@ -1,11 +1,12 @@
+;
 (function () {
-'use strict';
+    'use strict';
 
-	angular.module('blogsApp.version', [
-	  'blogsApp.version.interpolate-filter',
-	  'blogsApp.version.version-directive'
-	])
+    angular.module('blogsApp.version', [
+        'blogsApp.version.interpolate-filter',
+        'blogsApp.version.version-directive'
+    ])
 
-	.value('version', '0.1');
+        .value('version', '0.1');
 
 }());
