@@ -26,7 +26,7 @@
 
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
-    "pretest:ci": "grunt",
+    "pretest:ci": "grunt test",
     "test:ci": "karma start karma.conf.js --no-auto-watch --single-run --reporters=dots --browsers=Firefox",
     "test-single-run": "karma start karma.conf.js  --single-run",
 

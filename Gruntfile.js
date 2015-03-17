@@ -129,6 +129,8 @@ module.exports = function (grunt) {
 
     // DEFAULT TASK
     grunt.registerTask('default', ['uglify', 'compass']);
+    // Test TASK
+    grunt.registerTask('test', ['jshint', 'uglify']);
 
     // ===========================================================================
     // LOAD GRUNT PLUGINS ========================================================
