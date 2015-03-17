@@ -111,18 +111,16 @@ module.exports = function (grunt) {
                         'app/scripts/*.js'
                     ],
                     'app/dist/js/components.min.js': [
-                        'app/scripts/components/version/*.js',
-                        'app/scripts/components/date/*.js',
-                        'app/scripts/components/core/*.js'
-                    ],
-                    'app/dist/js/main.min.js': [
-                        'app/scripts/components/*.js'
+                        'app/scripts/components/**/*.js'
                     ],
                     'app/dist/js/services.min.js': [
                         'app/scripts/services/**/*.js'
                     ],
                     'app/dist/js/controllers.min.js': [
                         'app/scripts/controllers/**/*.js'
+                    ],
+                    'app/dist/js/helpers.min.js': [
+                        'app/scripts/helpers/**/*.js'
                     ]
                 }
             }
