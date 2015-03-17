@@ -14,6 +14,6 @@
 
     // version component module
     blogsApp.components.version =
-        angular.module('blogsApp.components.version', [])
+        angular.module('blogsApp.components.version', []);
 
 }());
