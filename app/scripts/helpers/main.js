@@ -1,5 +1,5 @@
 /*global window */
-(function($) {
+;(function($) {
     "use strict";
 
     /*-------------VARIABLES--------------*/
@@ -247,9 +247,9 @@
                         t = lem.attr("data-count");
 
                     if (type == "quote") {
-                        type = quote
+                        type = quote;
                     } else {
-                        type = list
+                        type = list;
                     }
                     var dima = {
                         "id": id,
@@ -326,13 +326,13 @@
 
                 lem.on('didLoadInstagram', didLoadInstagram);
 
-                if (m != undefined) {
+                if (m !== undefined) {
                     lem.instagram({
                         hash: m,
                         count: d,
                         clientId: h
                     });
-                } else if (i != undefined && a != undefined) {
+                } else if (i !== undefined && a !== undefined) {
                     lem.instagram({
                         userId: i,
                         accessToken: a,
@@ -345,7 +345,7 @@
                 $(".flkr-cont").each(function() {
                     var lem = $(this),
                         Val = lem.attr("data-limit"),
-                        id_val = lem.attr("data-id")
+                        id_val = lem.attr("data-id");
                     lem.jflickrfeed({
                         limit: Val,
                         qstrings: {
@@ -500,7 +500,7 @@
             var perfectScrollbar = function() {
                 $(".quick-view-content").perfectScrollbar();
                 $('.quick-view-content').perfectScrollbar('update');
-            }
+            };
 
             var parallax = function() {
 
@@ -541,7 +541,7 @@
                 perfectScrollbar();
                 callingSly();
                 $.scrollToTop();
-            }
+            };
             var build = {
                 init: init,
             };
@@ -571,7 +571,7 @@
                         });
                     }
 
-                })
+                });
             };
             var notAnimations = function() {
                 var elm = $("[data-animate]");
@@ -601,7 +601,7 @@
                         });
                     }
 
-                })
+                });
             };
             var twoLinesHover = function() {
                 $('.link_overlay.two_lines').each(function() {
@@ -610,7 +610,7 @@
                     $(this).find('ul').css({
                         'margin-left': t,
                         'margin-right': t
-                    })
+                    });
                 });
                 $('.work-info').each(function() {
                     var h = $(this).parent().outerHeight();
@@ -621,7 +621,7 @@
                     //console.log(h)
                     $(this).css({
                         'bottom': t
-                    })
+                    });
                 });
             };
             var init = function() {
@@ -634,7 +634,7 @@
                 }
 
                 twoLinesHover();
-            }
+            };
             var build = {
                 init: init,
                 twoLinesHover: twoLinesHover,
@@ -683,7 +683,7 @@
                         },
                         after: function() {}
                     });
-                })
+                });
             };
             var owlSlider = function() {
 
@@ -985,7 +985,7 @@
                 flexSlider();
                 owlSlider();
                 revolution();
-            }
+            };
             var build = {
                 init: init,
                 flexSlider: flexSlider,
@@ -1076,7 +1076,7 @@
 
             var init = function() {
                 lightBox();
-            }
+            };
 
             var build = {
                 init: init,
@@ -1111,14 +1111,14 @@
             var mediaElement = function() {
                 $('.audio-video').each(function() {
                     $(this).mediaelementplayer({});
-                })
+                });
             };
             var init = function() {
                 bigVedio();
                 mediaElement();
-            }
+            };
             var build = {
-                init: init,
+                init: init
             };
             return build;
         }();
@@ -1139,7 +1139,7 @@
                         handler: function() {
                             $(this).find("span").countTo({
                                 formatter: function(e) {
-                                    return e = e.toFixed(), e = e.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    return e = e.toFixed(), e = e.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                                 }
                             });
                         },
@@ -1253,7 +1253,7 @@
                 progress();
                 tabs();
                 notification();
-            }
+            };
             var build = {
                 init: init,
             };
@@ -1296,7 +1296,7 @@
             };
             var init = function() {
                 event();
-            }
+            };
             var build = {
                 init: init,
             };
@@ -1357,7 +1357,7 @@
                 $(".ajax-portfolio .isotope-item a[data-load]").click(function(d) {
                     var id = $(this).parents(".isotope-item").attr("id");
                     var url = $(this).attr("href");
-                    d.preventDefault()
+                    d.preventDefault();
                     if ($(".portfolio-ajax-expanded").is(":visible")) {
                         closeAjax();
                         setTimeout(function() {
@@ -1367,7 +1367,7 @@
                         loadAjax(url, id);
 
 
-                })
+                });
             };
             var loadAjax = function(url, id) {
                 /*var s = getNextItem(id),
@@ -1391,7 +1391,7 @@
                         openItem();
                     }
                 });
-            }
+            };
             var closeAjax = function() {
                 $(".portfolio-ajax-expanded")
                     .find(".portfolio-ajax-content").slideUp(600, function() {
@@ -1421,7 +1421,7 @@
                     setTimeout(function() {
                         loadAjax(url, id);
                     }, 700);
-                    d.preventDefault()
+                    d.preventDefault();
                 });
 
                 $(".close-ajax-portfolio").click(function(d) {
@@ -1432,14 +1432,14 @@
                             });
                         });
                     d.preventDefault();
-                })
+                });
             };
             //!AJAX
 
 
             var filterIsotop = function() {
 
-                var $container = $('.isotope')
+                var $container = $('.isotope');
                 var $containers = $('#infinite'); 
 
                 $container.imagesLoaded(function() {
@@ -1448,19 +1448,19 @@
                         itemSelector: '.isotope-item',
                         layoutMode: "masonry",
                         transitionDuration: '0.8s'
-                    })
+                    });
                 });
 
                 $('.filters a').click(function() {
-                    var li_p = $(this).parent()
-                    $('.filters  .current').removeClass('current')
-                    $(li_p).addClass('current')
-                        //for columns protfolio without margin
-                    var selector = $(this).attr('data-filter')
+                    var li_p = $(this).parent();
+                    $('.filters  .current').removeClass('current');
+                    $(li_p).addClass('current');
+                    //for columns protfolio without margin
+                    var selector = $(this).attr('data-filter');
                     $container.isotope({
-                        filter: selector,
-                    })
-                    return false
+                        filter: selector
+                    });
+                    return false;
                 });                
 
                 // Infinite Scroll
@@ -1509,7 +1509,7 @@
                 contact.validate({
                     //Callback when the form is valid.
                     submitHandler: function() {
-                        $("#contact").addClass('loading-form')
+                        $("#contact").addClass('loading-form');
 
                         // Ajax Submit
                         $.ajax({

@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
         if (hrefVal.length > 2) {
             $('.all_content').addClass('animated ' + transitions);
             setTimeout(function() {
-                window.location = hrefVal
+                window.location = hrefVal;
             }, 800);
             return false;
         }
@@ -89,13 +89,13 @@ jQuery(document).ready(function($) {
                 $('.isotope-item').each(function(i) {
                     $(this).css({
                         'opacity': 0
-                    })
+                    });
                 });
                 //loading items one by one
                 $('.isotope-item').each(function(i) {
                     $(this).delay(i * 100).animate({
                         'opacity': 1
-                    })
+                    });
                 });
             }
             //delet loading class ( ajax issues)

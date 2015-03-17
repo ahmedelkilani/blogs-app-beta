@@ -1,5 +1,4 @@
-;
-(function () {
+;(function () {
     'use strict';
 
     // date formatter filter

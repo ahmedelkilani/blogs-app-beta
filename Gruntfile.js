@@ -30,7 +30,6 @@ module.exports = function (grunt) {
                     'inject': true
                 }
             },
-
             // when this task is run, lint the Gruntfile and all js files in app
             build: [
                 '*.js',
@@ -128,7 +127,9 @@ module.exports = function (grunt) {
     });
 
     // DEFAULT TASK
-    grunt.registerTask('default', ['uglify', 'compass']);
+    grunt.registerTask('default', ['jshint', 'uglify', 'compass']);
+    // Dev Task
+    grunt.registerTask('dev', ['jshint', 'uglify:build']);
     // Test TASK
     grunt.registerTask('test', ['jshint', 'uglify']);
 

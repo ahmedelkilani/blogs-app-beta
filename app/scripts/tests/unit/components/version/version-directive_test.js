@@ -1,4 +1,4 @@
-(function () {
+;(function () {
 'use strict';
 
 	describe('blogsApp.version module', function() {

@@ -1,5 +1,4 @@
-;
-(function () {
+;(function () {
     'use strict';
 
     angular.module('blogsApp.app.routes', [ 'ngRoute']).
