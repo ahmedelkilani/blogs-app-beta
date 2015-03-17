@@ -3,8 +3,8 @@
 
     // posts services
 
-    angular.module('blogsApp.posts.services', ['ngResource'])
-        .service('PostsService', ['$resource',
+    blogsApp.services
+        .service('postsData', ['$resource',
             function ($resource) {
                 this.posts = $resource('server/mocks/posts.json?v=' + new Date().getTime());
         }]);

@@ -1,128 +1,132 @@
-<div class="main cl_8 first" ng-controller="PostsListController">
+<div ng-controller="postsListController">
+    <div class="main cl_8 first">
 
-    <div ng-repeat="post in posts">
-        <!-- POST WITHOUT IMAGE -->
-        <article role="article" class="post ">
-            <div class="post-meta box">
-                <ul>
-                    <li class="post-on">Posted by {{post.author}} on {{post.date | defaultDate}}</li>
-                    <li class="post-view"><i class="fa fa-eye"></i> {{post.views}} Views</li>
-                    <li class="post-comments"><i class="fa fa-comments"></i> {{post.comments.length}} Comments</li>
-                </ul>
-            </div>
-            <div class="post-content text-start box">
-                <h4><a href="#">{{post.title}}</a>
-                </h4>
+        <div ng-repeat="post in posts">
+            <!-- POST WITHOUT IMAGE -->
+            <article role="article" class="post ">
+                <div class="post-meta box">
+                    <ul>
+                        <li class="post-on">Posted by {{post.author}} on {{post.date | defaultDate}}</li>
+                        <li class="post-view"><i class="fa fa-eye"></i> {{post.views}} Views</li>
+                        <li class="post-comments"><i class="fa fa-comments"></i> {{post.comments.length}} Comments</li>
+                    </ul>
+                </div>
+                <div class="post-content text-start box">
+                    <h4><a href="#">{{post.title}}</a>
+                    </h4>
 
-                <p>{{post.summary}}</p>
-            </div>
-        </article>
-        <!--! POST WITHOUT IMAGE -->
-    </div>
-    <div ng-hide="true">
-        <!-- QUOTE POST -->
-        <article role="article" class="post ">
-            <blockquote class="blog-style">
-                <div class="topaz-border"></div>
-                <p>“A designer is an emerging synthesis of artist, inventor, mechanic,”</p>
-                <cite><a href="">Buckminster Fuller</a>
-                </cite>
-            </blockquote>
-            <div class="post-meta box">
-                <ul>
-                    <li class="post-on">Posted by Admin on 09 Sept 2014</li>
-                    <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
-                    <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
-                </ul>
-            </div>
-            <div class="post-content text-start box">
-                <h4><a href="#">process of prototyping</a>
-                </h4>
-
-                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-                    quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
-                    sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
-                    velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet
-                    nibh vulputate cursus a sit amet mauris...</p>
-            </div>
-        </article>
-        <!--! QUOTE POST -->
-
-        <!-- TWITTER POST -->
-        <article role="article" class="post ">
-            <div class="post-img pad">
-                <blockquote class="twitter-tweet" data-cards="hidden" lang="en">
-                    <p>Check out this great <a href="https://twitter.com/hashtag/themeforest?src=hash">#themeforest</a>
-                        item &#39;Topaz - PSD Template&#39; <a href="http://t.co/j8dWajauBp">http://t.co/j8dWajauBp</a>
-                    </p>&mdash; PixelDima (@PixelDima) <a
-                        href="https://twitter.com/PixelDima/status/488922142143021056">July 15, 2014</a>
+                    <p>{{post.summary}}</p>
+                </div>
+            </article>
+            <!--! POST WITHOUT IMAGE -->
+        </div>
+        <div ng-hide="true">
+            <!-- QUOTE POST -->
+            <article role="article" class="post ">
+                <blockquote class="blog-style">
+                    <div class="topaz-border"></div>
+                    <p>“A designer is an emerging synthesis of artist, inventor, mechanic,”</p>
+                    <cite><a href="">Buckminster Fuller</a>
+                    </cite>
                 </blockquote>
-                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <div class="post-meta box">
-                <ul>
-                    <li class="post-on">Posted by Admin on 09 Sept 2014</li>
-                    <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
-                    <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
-                </ul>
-            </div>
-            <div class="post-content text-start box">
-                <h4><a href="#">See what others say about #PixelDima</a>
-                </h4>
+                <div class="post-meta box">
+                    <ul>
+                        <li class="post-on">Posted by Admin on 09 Sept 2014</li>
+                        <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
+                        <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
+                    </ul>
+                </div>
+                <div class="post-content text-start box">
+                    <h4><a href="#">process of prototyping</a>
+                    </h4>
 
-                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-                    quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
-                    sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
-                    velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet
-                    nibh vulputate cursus a sit amet mauris...</p>
-            </div>
-        </article>
-        <!--! TWITTER POST -->
+                    <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
+                        quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                        sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
+                        velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet
+                        nibh vulputate cursus a sit amet mauris...</p>
+                </div>
+            </article>
+            <!--! QUOTE POST -->
 
+            <!-- TWITTER POST -->
+            <article role="article" class="post ">
+                <div class="post-img pad">
+                    <blockquote class="twitter-tweet" data-cards="hidden" lang="en">
+                        <p>Check out this great <a
+                                href="https://twitter.com/hashtag/themeforest?src=hash">#themeforest</a>
+                            item &#39;Topaz - PSD Template&#39; <a
+                                    href="http://t.co/j8dWajauBp">http://t.co/j8dWajauBp</a>
+                        </p>&mdash; PixelDima (@PixelDima) <a
+                            href="https://twitter.com/PixelDima/status/488922142143021056">July 15, 2014</a>
+                    </blockquote>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="post-meta box">
+                    <ul>
+                        <li class="post-on">Posted by Admin on 09 Sept 2014</li>
+                        <li class="post-view"><i class="fa fa-eye"></i> 122 Views</li>
+                        <li class="post-comments"><i class="fa fa-comments"></i> 12 Comments</li>
+                    </ul>
+                </div>
+                <div class="post-content text-start box">
+                    <h4><a href="#">See what others say about #PixelDima</a>
+                    </h4>
+
+                    <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
+                        quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                        sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
+                        velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Duis sed odio sit amet
+                        nibh vulputate cursus a sit amet mauris...</p>
+                </div>
+            </article>
+            <!--! TWITTER POST -->
+
+        </div>
     </div>
-</div>
-<div class="main cl_8 first" ng-controller="PostsListController">
-    <!-- PAGINATION -->
-    <div class="dima-pagination text-end">
-        <ul>
-            <li>
-                <a href="#" class="current-page">
-                    <span>1</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>2</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>3</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>4</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>...</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>21</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
+    <div class="main cl_8 first">
+        <!-- PAGINATION -->
+        <div class="dima-pagination text-end">
+            <ul>
+                <li>
+                    <a href="#" class="current-page">
+                        <span>1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>4</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>...</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>21</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
                                             <span><i class="fa fa-angle-right"></i>
                                             </span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!--! PAGINATION -->
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--! PAGINATION -->
 
+    </div>
 </div>

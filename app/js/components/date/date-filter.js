@@ -2,7 +2,7 @@
     'use strict';
 
     // date formatter filter
-    angular.module('blogsApp.date.date-filter', [])
+    blogsApp.components.date
         // default date formatter
         .filter('defaultDate', ['$filter', function ($filter) {
             return function (text) {

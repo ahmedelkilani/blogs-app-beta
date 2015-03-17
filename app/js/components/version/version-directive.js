@@ -1,7 +1,7 @@
 ;(function () {
     'use strict';
 
-    angular.module('blogsApp.version.version-directive', [])
+    blogsApp.components.version
 
         .directive('appVersion', ['version', function (version) {
             return function (scope, elm, attrs) {

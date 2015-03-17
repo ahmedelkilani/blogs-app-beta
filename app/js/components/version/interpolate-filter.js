@@ -1,7 +1,7 @@
 ;(function () {
     'use strict';
 
-    angular.module('blogsApp.version.interpolate-filter', [])
+    blogsApp.components.version
 
         .filter('interpolate', ['version', function (version) {
             return function (text) {

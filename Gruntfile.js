@@ -33,7 +33,7 @@ module.exports = function (grunt) {
             // when this task is run, lint the Gruntfile and all js files in app
             build: [
                 '*.js',
-                'app/scripts/**/*.js'
+                'app/js/**/*.js'
             ]
         },
         // configure compass to compile sass -----------------------------------
@@ -100,26 +100,25 @@ module.exports = function (grunt) {
                         'app/vendor/js/revolution-slider/js/jquery.themepunch.revolution.min.js',
                         'app/vendor/js/video.js',
                         'app/vendor/js/bigvideo.js'
-
                     ]
                 }
             },
             build: {
                 files: {
                     'app/dist/js/app.min.js': [
-                        'app/scripts/*.js'
+                        'app/js/*.js'
                     ],
                     'app/dist/js/components.min.js': [
-                        'app/scripts/components/**/*.js'
+                        'app/js/components/**/*.js'
                     ],
                     'app/dist/js/services.min.js': [
-                        'app/scripts/services/**/*.js'
+                        'app/js/services/**/*.js'
                     ],
                     'app/dist/js/controllers.min.js': [
-                        'app/scripts/controllers/**/*.js'
+                        'app/js/controllers/**/*.js'
                     ],
                     'app/dist/js/helpers.min.js': [
-                        'app/scripts/helpers/**/*.js'
+                        'app/js/helpers/**/*.js'
                     ]
                 }
             }
