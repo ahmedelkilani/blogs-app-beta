@@ -4,7 +4,7 @@
     describe('blogsApp.services.core module', function () {
         beforeEach(module('blogsApp.services.core'));
 
-        ddescribe('urlService service', function () {
+        describe('urlService service', function () {
             var urlService;
             beforeEach(function () {
                 inject(function ($injector) {
