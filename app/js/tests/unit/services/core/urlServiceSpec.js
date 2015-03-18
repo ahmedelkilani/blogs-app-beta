@@ -2,6 +2,8 @@
     'use strict';
 
     describe('blogsApp.services.core module', function () {
+
+        beforeEach(module('blogsApp.settings'));
         beforeEach(module('blogsApp.services.core'));
 
         describe('urlService service', function () {

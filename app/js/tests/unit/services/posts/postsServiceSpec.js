@@ -1,7 +1,7 @@
 ;(function () {
     'use strict';
 
-    ddescribe('blogsApp.services.posts module', function () {
+    describe('blogsApp.services.posts module', function () {
 
         beforeEach(module('blogsApp.settings'));
         beforeEach(module('blogsApp.services.posts'));
