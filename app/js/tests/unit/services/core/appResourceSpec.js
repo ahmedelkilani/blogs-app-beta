@@ -1,7 +1,7 @@
 ;(function () {
     'use strict';
 
-    ddescribe('blogsApp.services.core module', function () {
+    describe('blogsApp.services.core module', function () {
         beforeEach(module('blogsApp.services.core'));
 
         describe('appResource service', function () {
