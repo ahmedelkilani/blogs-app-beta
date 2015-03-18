@@ -1,10 +1,10 @@
 ;(function () {
     'use strict';
 
-    blogsApp.controllers
-        .controller('postsListController', ['$scope', 'postsData', function ($scope, postsData) {
+    blogsApp.controllers.posts
+        .controller('postsListController', ['$scope', 'postsService', function ($scope, postsService) {
 
-            $scope.posts = postsData.posts.query();
+            $scope.posts = postsService.posts.query();
 
         }]);
 
