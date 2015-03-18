@@ -4,7 +4,7 @@
     blogsApp.controllers.posts
         .controller('postsListController', ['$scope', 'postsService', function ($scope, postsService) {
 
-            $scope.posts = postsService.posts.query();
+            $scope.posts = postsService.getPosts();
 
         }]);
 

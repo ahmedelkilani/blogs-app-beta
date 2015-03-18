@@ -4,9 +4,11 @@
     // posts services
 
     blogsApp.services.posts
-        .service('postsService', ['$resource',
-            function ($resource) {
-                this.posts = $resource('server/mocks/posts.json?v=' + new Date().getTime());
-        }]);
+        .service('postsService', ['appResource',
+            function (appResource) {
+                this.getPosts = function() {
+                    return appResource.resource('server/mocks/posts.json?v=' + new Date().getTime()).query();
+                };
+            }]);
 
 }());

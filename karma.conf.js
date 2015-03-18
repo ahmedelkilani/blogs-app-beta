@@ -7,10 +7,11 @@ module.exports = function (config) {
             'vendor/bower_components/angular/angular.js',
             'vendor/bower_components/angular-route/angular-route.js',
             'vendor/bower_components/angular-mocks/angular-mocks.js',
+            'vendor/bower_components/angular-resource/angular-resource.js',
             'js/*.js',
             'js/components/**/*.js',
             'js/controllers/**/*.js',
-            'js/service/**/*.js',
+            'js/services/**/*.js',
             'js/tests/unit/**/*.js'
         ],
 
