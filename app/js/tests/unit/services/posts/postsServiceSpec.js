@@ -1,5 +1,4 @@
-;
-(function () {
+;(function () {
     'use strict';
 
     ddescribe('blogsApp.services.posts module', function () {
