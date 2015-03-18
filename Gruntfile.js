@@ -99,7 +99,8 @@ module.exports = function (grunt) {
                         'app/vendor/js/revolution-slider/js/jquery.themepunch.tools.min.js',
                         'app/vendor/js/revolution-slider/js/jquery.themepunch.revolution.min.js',
                         'app/vendor/js/video.js',
-                        'app/vendor/js/bigvideo.js'
+                        'app/vendor/js/bigvideo.js',
+                        'app/vendor/bower_components/uri.js/src/URI.js'
                     ]
                 }
             },

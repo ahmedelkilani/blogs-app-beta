@@ -4,10 +4,10 @@
     // posts services
 
     blogsApp.services.posts
-        .service('postsService', ['appResource',
-            function (appResource) {
+        .service('postsService', ['appResource', 'routes',
+            function (appResource, routes) {
                 this.getPosts = function() {
-                    return appResource.resource('server/mocks/posts.json?v=' + new Date().getTime()).query();
+                    return appResource.resource(routes.postsService).query();
                 };
             }]);
 
