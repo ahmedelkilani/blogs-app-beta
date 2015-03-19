@@ -4,7 +4,7 @@
     describe('blogsApp.services.posts module', function () {
 
         beforeEach(module('blogsApp.settings'));
-        beforeEach(module('blogsApp.services.posts'));
+        beforeEach(module('blogsApp.services'));
 
         describe('postsService service', function () {
             var postsService;

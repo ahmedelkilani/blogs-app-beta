@@ -3,7 +3,7 @@
 
     // posts services
 
-    blogsApp.services.posts
+    blogsApp.services
         .service('postsService', ['appResource', 'routes',
             function (appResource, routes) {
                 this.getPosts = function() {
