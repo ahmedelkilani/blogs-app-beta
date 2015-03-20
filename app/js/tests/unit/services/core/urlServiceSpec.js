@@ -7,10 +7,11 @@
         beforeEach(module('blogsApp.services.core'));
 
         describe('urlService service', function () {
-            var urlService;
+            var urlService, settings;
             beforeEach(function () {
                 inject(function ($injector) {
                     urlService = $injector.get('urlService');
+                    settings = $injector.get('settings');
                 });
             });
 
@@ -21,7 +22,7 @@
                     useCacheBuster: true,
                     cacheBuster : 'cacheBuster'
                 };
-                expect(urlService.createUrl('posts.json')).toEqual('server/mocks/v0.1/posts.json?v=cacheBuster');
+                expect(urlService.createUrl('posts.json')).toEqual(settings.server_base_mock_url + 'posts.json?v=cacheBuster');
 
             });
 
@@ -31,7 +32,7 @@
                     useMocks: true,
                     useCacheBuster: false
                 };
-                expect(urlService.createUrl('posts.json')).toEqual('server/mocks/v0.1/posts.json');
+                expect(urlService.createUrl('posts.json')).toEqual(settings.server_base_mock_url + 'posts.json');
 
             });
 
@@ -41,7 +42,24 @@
                     useMocks: false,
                     useCacheBuster: false
                 };
-                expect(urlService.createUrl('posts.json')).toEqual('server/v0.1/posts.json');
+                expect(urlService.createUrl('posts.json')).toEqual(settings.server_base_url + 'posts.json');
+
+            });
+
+            it('should override the settings by calling paramters', function () {
+
+                urlService.settings = {
+                    useMocks: true,
+                    useCacheBuster: true
+                };
+                expect(urlService.createUrl('posts.json', false, false)).toEqual(settings.server_base_url + 'posts.json');
+
+                urlService.settings = {
+                    useMocks: false,
+                    useCacheBuster: false,
+                    cacheBuster : 'cacheBuster'
+                };
+                expect(urlService.createUrl('posts.json', true, true)).toEqual(settings.server_base_mock_url + 'posts.json?v=cacheBuster');
 
             });
         });

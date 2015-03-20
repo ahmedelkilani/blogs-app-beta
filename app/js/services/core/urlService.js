@@ -6,16 +6,19 @@
 
             var scope = this;
             scope.settings = {
-                useMocks: true,
-                useCacheBuster: true,
+                useMocks: settings.server_offline_mode,
+                useCacheBuster: settings.server_cacheBuster_enabled,
                 cacheBuster: new Date().getTime()
             };
 
-            this.createUrl = function (path) {
+            this.createUrl = function (path, useMocks, useCacheBuster) {
                 var scope = this;
-                var baseUrl = scope.settings.useMocks ? settings.base_mocks_url : settings.base_url;
+                useMocks = (useMocks == undefined ? scope.settings.useMocks : useMocks);
+                useCacheBuster = (useCacheBuster == undefined ? scope.settings.useCacheBuster : useCacheBuster);
+                var baseUrl = useMocks ? settings.server_base_mock_url : settings.server_base_url;
                 var url = new URI(baseUrl + path);
-                if (scope.settings.useCacheBuster) {
+
+                if (useCacheBuster) {
                     url.setQuery('v', scope.settings.cacheBuster);
                 }
                 return url.toString();
