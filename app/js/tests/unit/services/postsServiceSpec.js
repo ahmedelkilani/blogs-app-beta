@@ -9,25 +9,22 @@
         describe('postsService service', function () {
             var postsService;
 
-            // Mocking
+            // --------- Mocking --------- //
 
             beforeEach(function () {
                 module(function ($provide) {
                     $provide.service('appResource', function () {
-                        return {
-                            resource: function () {
-                                return {
-                                    query: function () {
-                                        return [{'author': 'Ahmed'}];
-                                    }
-                                };
-                            }
-                        };
+
+                        var appResourceMock = new blogsApp.mocks.services.appResourceMock();
+                        appResourceMock.resource().query.andReturn(
+                            [{'author': 'Ahmed'}]
+                        );
+                        return appResourceMock;
                     });
                 });
             });
 
-            // Injectors
+            // --------- Injectors --------- //
 
             beforeEach(function () {
                 inject(function ($injector) {

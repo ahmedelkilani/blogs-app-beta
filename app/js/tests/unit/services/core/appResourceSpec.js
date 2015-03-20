@@ -13,15 +13,15 @@
                 });
             });
 
-            it('should make a successful request to /server/mocks/posts.json', function () {
-                $httpBackend.expectGET('/server/mocks/posts.json')
+            it('should make a successful request to /server/_helpers/posts.json', function () {
+                $httpBackend.expectGET('/server/_helpers/posts.json')
                     .respond([{
                         author: 'Ahmed'
                     }]);
 
 
                 var result = appResource
-                    .resource('/server/mocks/posts.json')
+                    .resource('/server/_helpers/posts.json')
                     .query();
 
                 $httpBackend.flush();
