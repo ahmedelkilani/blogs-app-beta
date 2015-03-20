@@ -104,7 +104,7 @@ module.exports = function (grunt) {
                     ]
                 }
             },
-            build: {
+            app: {
                 files: {
                     'app/dist/js/app.min.js': [
                         'app/js/*.js'
@@ -129,7 +129,7 @@ module.exports = function (grunt) {
     // DEFAULT TASK
     grunt.registerTask('default', ['jshint', 'uglify', 'compass']);
     // Dev Task
-    grunt.registerTask('dev', ['jshint', 'uglify:build']);
+    grunt.registerTask('dev', ['jshint', 'uglify:app']);
     // Test TASK
     grunt.registerTask('test', ['jshint', 'uglify']);
 
