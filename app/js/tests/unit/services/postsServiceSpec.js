@@ -7,19 +7,14 @@
         beforeEach(module('blogsApp.services'));
 
         describe('postsService service', function () {
-            var postsService;
+            var postsService,appResourceMock;
 
             // --------- Mocking --------- //
 
             beforeEach(function () {
                 module(function ($provide) {
                     $provide.service('appResource', function () {
-
-                        var appResourceMock = new blogsApp.mocks.services.appResourceMock();
-                        appResourceMock.resource().query.andReturn(
-                            [{'author': 'Ahmed'}]
-                        );
-                        return appResourceMock;
+                        return new blogsApp.mocks.services.appResourceMock();
                     });
                 });
             });
@@ -29,10 +24,15 @@
             beforeEach(function () {
                 inject(function ($injector) {
                     postsService = $injector.get('postsService');
+                    appResourceMock = $injector.get('appResource');
                 });
             });
 
             it('should get a list of blog posts', function () {
+
+                appResourceMock.resource().query.andReturn(
+                    [{'author': 'Ahmed'}]
+                );
 
                 expect(postsService.getPosts()[0].author).toBe('Ahmed');
 

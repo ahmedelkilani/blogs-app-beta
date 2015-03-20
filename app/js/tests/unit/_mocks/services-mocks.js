@@ -6,7 +6,7 @@
 
     // ----- appResourceMock ------ //
 
-    blogsApp.mocks.services.appResourceMock = function(){
+    blogsApp.mocks.services.appResourceMock = function () {
 
         this.resource = jasmine.createSpy('resource').andReturn(
             {
@@ -14,5 +14,4 @@
             });
     };
 
-}
-)();
+})();
