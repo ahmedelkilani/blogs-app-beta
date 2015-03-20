@@ -13,8 +13,8 @@
 
             this.createUrl = function (path, useMocks, useCacheBuster) {
                 var scope = this;
-                useMocks = (useMocks == undefined ? scope.settings.useMocks : useMocks);
-                useCacheBuster = (useCacheBuster == undefined ? scope.settings.useCacheBuster : useCacheBuster);
+                useMocks = (useMocks === undefined ? scope.settings.useMocks : useMocks);
+                useCacheBuster = (useCacheBuster === undefined ? scope.settings.useCacheBuster : useCacheBuster);
                 var baseUrl = useMocks ? settings.server_base_mock_url : settings.server_base_url;
                 var url = new URI(baseUrl + path);
 
