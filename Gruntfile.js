@@ -33,7 +33,7 @@ module.exports = function (grunt) {
             // when this task is run, lint the Gruntfile and all js files in app
             build: [
                 '*.js',
-                'app/js/**/*.js'
+                'public/js/**/*.js'
             ]
         },
         // configure compass to compile sass -----------------------------------
@@ -41,8 +41,8 @@ module.exports = function (grunt) {
             dist: {                 // Target
                 options: {          // Target options
                     sourcemap: true,
-                    basePath: 'app/',
-                    sassDir: 'styles/sass',
+                    basePath: 'public/',
+                    sassDir: 'sass',
                     cssDir: 'dist/css',
                     httpPath: '/',
                     imagesDir: 'assets/img',
@@ -59,67 +59,67 @@ module.exports = function (grunt) {
             },
             vendor: {
                 files: {
-                    'app/dist/js/vendor.min.js': [
-                        'app/vendor/bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js',
-                        'app/vendor/bower_components/jquery/dist/jquery.js',
-                        'app/vendor/bower_components/angular/angular.js',
-                        'app/vendor/bower_components/angular-route/angular-route.js',
-                        'app/vendor/bower_components/angular-resource/angular-resource.js',
-                        'app/vendor/bower_components/jquery.easing/js/jquery.easing.js',
-                        'app/vendor/bower_components/imagesloaded/imagesloaded.pkgd.js',
-                        'app/vendor/bower_components/respond-minmax/src/respond.js',
-                        'app/vendor/bower_components/waypoints/lib/jquery.waypoints.js',
-                        'app/vendor/js/SmoothScroll.js',
-                        'app/vendor/bower_components/skrollr/src/skrollr.js',
-                        'app/vendor/js/sly.min.js',
-                        'app/vendor/bower_components/perfect-scrollbar/src/perfect-scrollbar.js',
-                        'app/vendor/bower_components/retinajs/src/retina.js',
-                        'app/vendor/bower_components/jquery.localScroll/jquery.localScroll.js',
-                        'app/vendor/bower_components/jquery.scrollTo/jquery.scrollTo.js',
-                        'app/vendor/bower_components/jQuery-One-Page-Nav/jquery.nav.js',
-                        'app/vendor/bower_components/jquery-hoverIntent/jquery.hoverIntent.js',
-                        'app/vendor/bower_components/superfish/js/superfish.js',
-                        'app/vendor/bower_components/jquery-placeholder/jquery.placeholder.js',
-                        'app/vendor/bower_components/countUp.js/countUp.js',
-                        'app/vendor/bower_components/isotope/dist/isotope.pkgd.js',
-                        'app/vendor/js/jquery.flatshadow.js',
-                        'app/vendor/bower_components/jquery-knob/src/jquery.knob.js',
-                        'app/vendor/js/jflickrfeed.min.js',
-                        'app/vendor/bower_components/jquery-instagram/src/instagram.js',
-                        'app/vendor/bower_components/twitter-fetcher/js/twitterFetcher.js',
-                        'app/vendor/bower_components/bootstrap/dist/js/bootstrap.js',
-                        'app/vendor/js/responsive.tab.js',
-                        'app/vendor/bower_components/magnific-popup/dist/jquery.magnific-popup.js',
-                        'app/vendor/bower_components/jquery-validation/dist/jquery.validate.js',
-                        'app/vendor/bower_components/owl-carousel/owl-carousel/owl.carousel.js',
-                        'app/vendor/js/jquery.flexslider.js',
-                        'app/vendor/bower_components/jquery-ui/jquery-ui.js',
-                        'app/vendor/js/zoomsl-3.0.min.js',
-                        'app/vendor/bower_components/infinite-scroll/jquery.infinitescroll.js',
-                        'app/vendor/js/revolution-slider/js/jquery.themepunch.tools.min.js',
-                        'app/vendor/js/revolution-slider/js/jquery.themepunch.revolution.min.js',
-                        'app/vendor/js/video.js',
-                        'app/vendor/js/bigvideo.js',
-                        'app/vendor/bower_components/uri.js/src/URI.js'
+                    'public/dist/js/vendor.min.js': [
+                        'public/vendor/bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js',
+                        'public/vendor/bower_components/jquery/dist/jquery.js',
+                        'public/vendor/bower_components/angular/angular.js',
+                        'public/vendor/bower_components/angular-route/angular-route.js',
+                        'public/vendor/bower_components/angular-resource/angular-resource.js',
+                        'public/vendor/bower_components/jquery.easing/js/jquery.easing.js',
+                        'public/vendor/bower_components/imagesloaded/imagesloaded.pkgd.js',
+                        'public/vendor/bower_components/respond-minmax/src/respond.js',
+                        'public/vendor/bower_components/waypoints/lib/jquery.waypoints.js',
+                        'public/vendor/js/SmoothScroll.js',
+                        'public/vendor/bower_components/skrollr/src/skrollr.js',
+                        'public/vendor/js/sly.min.js',
+                        'public/vendor/bower_components/perfect-scrollbar/src/perfect-scrollbar.js',
+                        'public/vendor/bower_components/retinajs/src/retina.js',
+                        'public/vendor/bower_components/jquery.localScroll/jquery.localScroll.js',
+                        'public/vendor/bower_components/jquery.scrollTo/jquery.scrollTo.js',
+                        'public/vendor/bower_components/jQuery-One-Page-Nav/jquery.nav.js',
+                        'public/vendor/bower_components/jquery-hoverIntent/jquery.hoverIntent.js',
+                        'public/vendor/bower_components/superfish/js/superfish.js',
+                        'public/vendor/bower_components/jquery-placeholder/jquery.placeholder.js',
+                        'public/vendor/bower_components/countUp.js/countUp.js',
+                        'public/vendor/bower_components/isotope/dist/isotope.pkgd.js',
+                        'public/vendor/js/jquery.flatshadow.js',
+                        'public/vendor/bower_components/jquery-knob/src/jquery.knob.js',
+                        'public/vendor/js/jflickrfeed.min.js',
+                        'public/vendor/bower_components/jquery-instagram/src/instagram.js',
+                        'public/vendor/bower_components/twitter-fetcher/js/twitterFetcher.js',
+                        'public/vendor/bower_components/bootstrap/dist/js/bootstrap.js',
+                        'public/vendor/js/responsive.tab.js',
+                        'public/vendor/bower_components/magnific-popup/dist/jquery.magnific-popup.js',
+                        'public/vendor/bower_components/jquery-validation/dist/jquery.validate.js',
+                        'public/vendor/bower_components/owl-carousel/owl-carousel/owl.carousel.js',
+                        'public/vendor/js/jquery.flexslider.js',
+                        'public/vendor/bower_components/jquery-ui/jquery-ui.js',
+                        'public/vendor/js/zoomsl-3.0.min.js',
+                        'public/vendor/bower_components/infinite-scroll/jquery.infinitescroll.js',
+                        'public/vendor/js/revolution-slider/js/jquery.themepunch.tools.min.js',
+                        'public/vendor/js/revolution-slider/js/jquery.themepunch.revolution.min.js',
+                        'public/vendor/js/video.js',
+                        'public/vendor/js/bigvideo.js',
+                        'public/vendor/bower_components/uri.js/src/URI.js'
                     ]
                 }
             },
             app: {
                 files: {
-                    'app/dist/js/app.min.js': [
-                        'app/js/*.js'
+                    'public/dist/js/app.min.js': [
+                        'public/js/*.js'
                     ],
-                    'app/dist/js/components.min.js': [
-                        'app/js/components/**/*.js'
+                    'public/dist/js/components.min.js': [
+                        'public/js/components/**/*.js'
                     ],
-                    'app/dist/js/services.min.js': [
-                        'app/js/services/**/*.js'
+                    'public/dist/js/services.min.js': [
+                        'public/js/services/**/*.js'
                     ],
-                    'app/dist/js/controllers.min.js': [
-                        'app/js/controllers/**/*.js'
+                    'public/dist/js/controllers.min.js': [
+                        'public/js/controllers/**/*.js'
                     ],
-                    'app/dist/js/helpers.min.js': [
-                        'app/js/helpers/**/*.js'
+                    'public/dist/js/helpers.min.js': [
+                        'public/js/helpers/**/*.js'
                     ]
                 }
             }
@@ -129,9 +129,9 @@ module.exports = function (grunt) {
     // DEFAULT TASK
     grunt.registerTask('default', ['jshint', 'uglify', 'compass']);
     // Dev Task
-    grunt.registerTask('dev', ['jshint', 'uglify:app']);
+    grunt.registerTask('build:dev', ['jshint', 'uglify:app']);
     // Test TASK
-    grunt.registerTask('test', ['jshint', 'uglify']);
+    grunt.registerTask('build:test', ['jshint', 'uglify']);
 
     // ===========================================================================
     // LOAD GRUNT PLUGINS ========================================================
