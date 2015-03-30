@@ -1,9 +1,9 @@
 logs/*
 !.gitkeep
-node_modules/
-public/vendor/bower_components/
-public/dist/
-.sass-cache/
 tmp
 .DS_Store
 .idea
+public/dist
+public/vendor/bower_components
+node_modules
+.sass-cache
